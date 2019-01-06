@@ -1,0 +1,7 @@
+@mixin font($size: 16px, $family: Arial) {
+    font: $size $family;
+}
+
+@mixin boxShadow($color: rgba(0, 0, 0, .8)) {
+    box-shadow: 0 0 10px $color;
+}

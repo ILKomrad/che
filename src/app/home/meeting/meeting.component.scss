@@ -1,0 +1,24 @@
+@import '../../sass/variables'; 
+
+.meeting {
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+    &__label {
+        font: 1.1rem $mainFont;
+        text-transform: uppercase;
+    }
+
+    &__category {
+        text-transform: none;
+    }
+
+    &__gameType {
+        margin-top: 10px;
+        font: 1rem $mainFont;
+        color: $green;
+    }
+}

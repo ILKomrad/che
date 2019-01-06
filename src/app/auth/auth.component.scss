@@ -1,0 +1,20 @@
+@import '../sass/variables';
+
+
+.authForm {
+    .btn {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.authForm__toggle {
+    font: 1rem $mainFont;
+    display: inline-block;
+    margin-top: 20px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    cursor: pointer;
+}

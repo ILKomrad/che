@@ -1,0 +1,16 @@
+:host {
+    height: 100%;
+    overflow: auto;
+    padding: 10px 20px;
+}
+
+.meetingList {
+    &__item {
+        margin-top: 10px;
+        display: block;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}

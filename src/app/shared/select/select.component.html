@@ -1,0 +1,6 @@
+<div class="select">
+    <h5 class="select__value" (click)="toggleHide()">{{title}}</h5>
+    <div class="select__options" [ngClass]="{'hide': hide}">
+        <ng-content></ng-content>
+    </div>
+</div>

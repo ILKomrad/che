@@ -1,0 +1,91 @@
+@import './app/sass/variables';
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+html {
+    font-size: $fontSize;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    border: none;
+    box-shadow: 0 0 1px #000;
+
+    &_md {
+        height: 50px;
+        font: 1rem $mainFont;
+    }
+
+    &_text {
+        padding-left: 5px;
+    }
+}
+
+.form {
+    &-box {
+        margin-top: 10px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    &__title {
+        font: 1rem $mainFont;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.btn {
+    display: block;
+    text-transform: uppercase;
+    font: 1rem $mainFont;
+    border: none;
+    box-shadow: 0 0 1px #000;
+    cursor: pointer;
+
+    &_default {
+        background: transparent;
+    }
+
+    &_green {
+        background: $green;
+        color: #fff;
+    }
+
+    &_md {
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    &_alert {
+        background: $red;
+        color: #fff;
+    }
+}
+
+.box-shadow {
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5);
+    transition: all .5s;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    }
+}

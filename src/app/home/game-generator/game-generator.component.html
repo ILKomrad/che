@@ -1,0 +1,9 @@
+<form class="form" [formGroup]="generatorForm" (submit)="createGame()">
+    <p class="form-box">
+        <app-select (change)="setGameType($event)">
+            <app-select-option [value]="'giveaway'" [key]="'Поддавки'"></app-select-option>
+            <app-select-option [value]="'classic'" [key]="'Классика'"></app-select-option>
+        </app-select>
+    </p>
+    <button class="btn btn_default btn_md box-shadow" type="submit">старт</button>
+</form>

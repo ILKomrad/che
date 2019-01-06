@@ -1,0 +1,32 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.select {
+    position: relative;
+    
+    &__value {
+        font: 1rem $mainFont;
+        padding: 0 10px;
+        text-transform: uppercase;
+        height: 2.5 * $fontSize;
+        display: flex;
+        align-items: center;
+        position: relative;
+        box-shadow: 0 0 1px #000;
+        cursor: pointer;
+    }
+
+    &__options {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        @include boxShadow;
+    }
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}

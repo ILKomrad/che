@@ -1,0 +1,30 @@
+.home {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.auth {
+    width: 100%;
+}
+
+.home-left {
+    width: 30%;
+}
+
+.meetingList {
+    width: 70%;
+}
+
+.auth,
+.meetingList {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

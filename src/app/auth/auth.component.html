@@ -1,0 +1,23 @@
+<form [formGroup]="authForm" (submit)="onSubmit()" class="form authForm">
+    <h5 class="form__title">{{title}}</h5>
+    <p class="form-box">
+        <input type="text" class="input input_text input_md" formControlName="email" placeholder="email">
+    </p>
+    <p class="form-box">
+        <input type="text" class="input input_text input_md" formControlName="password" placeholder="пароль">
+    </p>
+    <ng-container *ngIf="state !== 'login'">
+        <p class="form-box">
+            <input type="text" class="input input_text input_md" formControlName="name" placeholder="имя">
+        </p>
+        <p class="form-box">
+            <app-select>
+                <app-select-option [value]="'first'" [key]="'Первый разряд'"></app-select-option>
+                <app-select-option [value]="'kms'" [key]="'КМС'"></app-select-option>
+                <app-select-option [value]="'ms'" [key]="'Мастер спорта'"></app-select-option>
+            </app-select>
+        </p>
+    </ng-container>
+    <button class="btn btn_default btn_md box-shadow" type="submit">{{btnTitle}}</button>
+    <a (click)="toggleState()" class="authForm__toggle">{{stateAlias}}</a>
+</form>

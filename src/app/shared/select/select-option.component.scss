@@ -1,0 +1,14 @@
+@import '../../sass/variables';
+
+.option {
+    display: block;
+    font: 1rem $mainFont;
+    padding: .5 * $fontSize;
+    cursor: pointer;
+    transition: background .5s;
+
+    &:hover {
+        background: $green;
+        color: #fff;
+    }
+}

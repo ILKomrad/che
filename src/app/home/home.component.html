@@ -1,0 +1,8 @@
+<div class="home">
+    <div class="home-left">
+        <app-auth *ngIf="!login" class="auth"></app-auth>
+        <app-game-generator *ngIf="login"></app-game-generator>
+    </div>
+    <app-meeting-list class="meetingList"></app-meeting-list>
+</div>
+<button class="btn btn_md btn_alert logout" (click)="logout()" *ngIf="login">logout</button>

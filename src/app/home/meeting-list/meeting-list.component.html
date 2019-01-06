@@ -1,0 +1,8 @@
+<div class="meetingList__inner">
+    <meeting 
+        *ngFor="let item of meeting" 
+        (selectMeeting)="onSelect($event)" 
+        [data]="item"
+        class="meetingList__item"
+    ></meeting>
+</div>
