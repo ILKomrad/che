@@ -56,7 +56,7 @@ html {
 .btn {
     display: block;
     text-transform: uppercase;
-    font: 1rem $mainFont;
+    font: .7rem $mainFont;
     border: none;
     box-shadow: 0 0 1px #000;
     cursor: pointer;
@@ -71,7 +71,7 @@ html {
     }
 
     &_md {
-        padding: 10px 20px;
+        padding: 1.6vmin 3vmin;
         border-radius: 5px;
     }
 
@@ -89,3 +89,9 @@ html {
         box-shadow: 0 0 20px rgba(0, 0, 0, .5);
     }
 }
+
+// @media (min-aspect-ratio: 16 / 9) {
+//     body {
+//         background: red;
+//     }
+// }
