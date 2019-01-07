@@ -31,7 +31,7 @@ export class AuthService {
 
         return new Promise((res, rej) => {
             const p = this.http.listen('authResult')
-            .subscribe((data: any) => {
+            .subscribe((data: any) => { console.log('login', data);
                 if (data.error) {
                     rej(data.error);
                 } else {
@@ -39,7 +39,6 @@ export class AuthService {
                     this.setUser(data.user);
                     this.loginAction$.emit(true);
                     res(data);
-                    console.log('login', data.user);
                 }
 
                 p.unsubscribe();
@@ -49,16 +48,12 @@ export class AuthService {
 
     isLogin(): Observable<any> {
         return new Observable(obs => {
-            this.checkLogin()
-            .then((data: any) => {
-                console.log( 'isLogin', data );
-                if (!data) {
-                    obs.next(false);
-                } else if (data.error) {
-                    console.log(data.error.message);
+            this.checkUser()
+            .then((data: any) => { console.log( 'isLogin', data );
+                if (data && data.error) { // invalid token or not login
                     obs.next(false);
                     this.logout();
-                } else {
+                } else { // valid token
                     this.setUser(data.user);
                     obs.next(true);
                 }
@@ -70,10 +65,10 @@ export class AuthService {
         });
     }
 
-    checkLogin(): Promise<any> {
+    checkUser(): Promise<any> {
         const token = this.getToken();
 
-        if (!token) { return Promise.resolve(false); }
+        if (!token) { return Promise.resolve({error: {message: 'not login'}}); }
 
         this.http.sendMessage('checkAuth', {
             token
